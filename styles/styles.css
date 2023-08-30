@@ -1,0 +1,45 @@
+body {
+  margin-top: 70px;
+  font-size: 24px;
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Raleway", sans-serif;
+  background-color: #E9EDC9;
+}
+
+.container {
+  width: 900px;
+}
+
+.div_1 button {
+  width: 100px;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #CCD5AE;
+  border: 0;
+  color: white;
+}
+.div_1 button:hover {
+  background-color: #D4A373;
+}
+
+.div_1 {
+  padding: 0;
+  height: 50px;
+  margin-top: 100px;
+}
+.div_1 input {
+  font-size: 24px;
+  color: black;
+}
+
+.ul_1 {
+  padding: 0;
+  margin-top: 100px;
+  background-color: #FEFAE0;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  color: #D4A373;
+}/*# sourceMappingURL=styles.css.map */
