@@ -1,6 +1,6 @@
 body {
-  margin-top: 70px;
-  font-size: 24px;
+  margin-top: 50px;
+  font-size: 14px;
   font-family: "Josefin Sans", sans-serif;
   font-family: "Raleway", sans-serif;
   background-color: #E9EDC9;
@@ -8,7 +8,7 @@ body {
 
 .div_1 button {
   width: 100px;
-  font-size: 24px;
+  font-size: 14px;
   font-weight: bold;
   background-color: #CCD5AE;
   border: 0;
@@ -19,21 +19,21 @@ body {
 }
 
 .div_1 {
-  width: 900px;
+  width: 500px;
   padding: 0;
-  height: 50px;
-  margin-top: 100px;
+  height: 30px;
+  margin-top: 70px;
 }
 .div_1 input {
-  font-size: 24px;
+  font-size: 14px;
   color: black;
   border: 0;
 }
 
 .ul_1 {
-  width: 900px;
+  width: 500px;
   padding: 0;
-  margin-top: 100px;
+  margin-top: 70px;
   background-color: #FEFAE0;
 }
 
@@ -44,9 +44,10 @@ h1 {
 }
 
 .select_unit {
-  width: 110px;
+  width: 80px;
   border: 0;
   background-color: white;
+  color: gray;
 }
 
 input[type=checkbox]:focus {
@@ -55,7 +56,7 @@ input[type=checkbox]:focus {
 }
 
 .inputNumber {
-  width: 150px;
+  width: 100px;
   border: 0;
 }
 
@@ -73,4 +74,8 @@ input:focus {
 
 label:has(input[type=checkbox]:checked) {
   text-decoration: line-through;
+}
+
+li:has(input[type=checkbox]:checked) {
+  background-color: #CCD5AE;
 }/*# sourceMappingURL=styles.css.map */

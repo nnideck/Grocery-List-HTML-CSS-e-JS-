@@ -76,7 +76,7 @@
     </div>
 
     <ul class="list-group container ul_1 itens-list">
-      <li class="list-group-item list-item">
+      <!--       <li class="list-group-item list-item">
         <label class="form-check-label" for="firstCheckbox"
           ><input
             class="form-check-input me-1 fixedTask"
@@ -97,30 +97,36 @@
           />
           <span>Second checkbox</span></label
         >
-      </li>
-      <li class="list-group-item">
-        <label class="form-check-label" for="thirdCheckbox"
-          ><input
-            class="form-check-input me-1"
-            type="checkbox"
-            value=""
-            id="thirdCheckbox"
-          />
-          <span>Third checkbox</span></label
-        >
+      </li>-->
+      <li class="list-group-item d-flex justify-content-between list-item">
+        <div>
+          <label class="form-check-label"
+            ><input class="form-check-input me-1" type="checkbox" value="" />
+            <span>Third checkbox</span></label
+          >
+        </div>
+        <button
+          type="button"
+          class="btn-close btn-delete"
+          aria-label="Close"
+          onclick="deleteItem()"
+        ></button>
       </li>
     </ul>
     <template class="template-item">
-      <li class="list-group-item list-item">
-        <label class="form-check-label" for="firstCheckbox"
-          ><input
-            class="form-check-input me-1 fixedTask"
-            type="checkbox"
-            value=""
-            id="firstCheckbox"
-          />
-          <span>First checkbox</span></label
-        >
+      <li class="list-group-item d-flex justify-content-between list-item">
+        <div>
+          <label class="form-check-label"
+            ><input class="form-check-input me-1" type="checkbox" value="" />
+            <span></span
+          ></label>
+        </div>
+        <button
+          type="button"
+          class="btn-close btn-delete"
+          aria-label="Close"
+          onclick="deleteItem()"
+        ></button>
       </li>
     </template>
     <script src="scripts.js"></script>

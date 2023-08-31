@@ -5,6 +5,7 @@ const templateItem = document.querySelector(".template-item");
 
 const btnAddItem = document.querySelector(".btn-add-item");
 const ItensList = document.querySelector(".itens-list");
+const btnDelete = document.querySelector(".btn-delete");
 
 /* function check() {
   const input = this.querySelector("input");
@@ -19,16 +20,26 @@ const ItensList = document.querySelector(".itens-list");
 }
  */
 function addTask() {
-  const value = `${inputQnt.value} ${inputUnit.value} de ${inputItem.value}`;
+  const value = inputItem.value;
   console.log(value);
   if (value) {
     const newItemTask = templateItem.content.cloneNode(true);
-    newItemTask.querySelector("span").textContent = value;
-    //newItemTask.querySelector("li").addEventListener("click", check);
+    newItemTask.querySelector("span").innerHTML = `${inputQnt.value} ${
+      inputUnit.value
+    } of ${value.bold()}`;
     // newItemTask.querySelector("button").addEventListener("click", remove);
     ItensList.insertBefore(newItemTask, ItensList.querySelector("li"));
-    // inputTask.value = "";
+    inputItem.value = "";
+    inputQnt.value = "";
+    inputUnit.value = "unit";
   }
 }
 
+function deleteItem() {
+  const item = document.querySelector(".list-item");
+  item.remove();
+}
+
 btnAddItem.addEventListener("click", addTask);
+
+//btnDelete.addEventListener("click", deleteItem);
