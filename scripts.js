@@ -16,13 +16,7 @@ const btnDelete = document.querySelector(".btn-delete");
 // 6 - adaptar a função check para salvar as tarefas com check
 // 7 - adaptar a função delete para retornar as tarefas não deletadas - OK
 
-let savedList = [
-  {
-    text: "Teste",
-    id: 1,
-    checked: false,
-  },
-];
+let savedList = [];
 
 function saveItem(newItem) {
   //pq if? toda vez que invoco a função ela de fato tem um novo item..
@@ -80,10 +74,15 @@ function addTask(newItem) {
 
   newListItem.querySelector("button").addEventListener("click", deleteItem);
   ItensList.appendChild(newListItem);
-  if (newItem.checked) {
-    input.setAttribute("checked", true);
+  console.log(newItem.checked);
+  if (newItem.checked == true) {
+    input.setAttribute("checked", "true");
   }
-  li.addEventListener("click", check);
+  // PQ QNDO COLOCO O ELSE DÁ ERRO?
+  /* else {
+    input.setAttribute("checked", "false");
+  } */
+  input.addEventListener("click", check);
 }
 
 function deleteItem() {
@@ -97,23 +96,25 @@ function deleteItem() {
 }
 
 function check() {
-  const input = this.querySelector("input");
-  const item = document.querySelector(".list-item");
+  //const input = this.querySelector("input");
+  const item = this.parentNode.parentNode.parentNode;
+  //document.querySelector(".list-item");
   const id = item.id;
-  if (input.checked) {
+  if (this.checked == true) {
     savedList.forEach(function (eachItem) {
       if (eachItem.id == id) {
         eachItem.checked = true;
       }
     });
     //ñ entendi a necessidade do else
-  } /*  else {
+  } else {
     savedList.forEach(function (eachItem) {
       if (eachItem.id == id) {
         eachItem.checked = false;
       }
     });
-  } */
+  }
+  saveItem(savedList);
 }
 
 btnAddItem.addEventListener("click", handleAddItem);
